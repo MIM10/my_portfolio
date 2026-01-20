@@ -1,0 +1,57 @@
+PowerShell 7.5.4
+PS D:\Code> npm create vite@latest portfolio-muaadz
+Need to install the following packages:
+create-vite@8.2.0
+Ok to proceed? (y) y
+
+
+> npx
+> create-vite portfolio-muaadz
+
+│
+◇  Select a framework:
+│  React
+│
+◇  Select a variant:
+│  JavaScript
+│
+◇  Use rolldown-vite (Experimental)?:
+│  No
+│
+◇  Install with npm and start now?
+│  Yes
+│
+◇  Scaffolding project in D:\Code\portfolio-muaadz...
+│
+◇  Installing dependencies with npm...
+
+added 157 packages, and audited 158 packages in 1m
+
+33 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+│
+◇  Starting dev server...
+
+> portfolio-muaadz@0.0.0 dev
+> vite
+
+
+  VITE v7.3.1  ready in 2940 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+6:28:07 PM [vite] (client) hmr update /src/App.jsx
+6:28:10 PM [vite] (client) hmr update /src/App.jsx (x2)
+6:28:17 PM [vite] (client) hmr update /src/App.jsx (x3)
+
+==========================================================================
+
+PS D:\Code\portfolio-muaadz> npm install styled-components
+
+PS D:\Code\portfolio-muaadz> npm install react-icons
+
+PS D:\Code\portfolio-muaadz> npm install framer-motion
+

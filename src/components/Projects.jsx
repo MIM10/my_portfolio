@@ -122,7 +122,7 @@ function Projects() {
             stack: 'Flutter • Laravel REST API • Firebase • MySQL',
             learning:
                 'Developing a real-world mobile application, integrating Flutter with REST APIs, managing authentication, real-time features, and designing scalable backend systems.',
-            github: '#',
+            github: 'https://github.com/Auliarahmannn/Kelompok7_MAD',
             demo: null,
         },
         // {

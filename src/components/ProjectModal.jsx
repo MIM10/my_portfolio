@@ -15,9 +15,10 @@ const Carousel = styled.div`
 const Slide = styled(motion.img)`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   position: absolute;
   inset: 0;
+  background: ${({ theme }) => theme.colors.card};
 `
 
 const Arrow = styled.button`
@@ -65,6 +66,7 @@ const Overlay = styled(motion.div)`
 
 const Modal = styled(motion.div)`
   background: ${({ theme }) => theme.colors.card};
+  text-align: left;
   max-width: 700px;
   width: 90%;
   border-radius: 20px;
@@ -95,6 +97,11 @@ const Title = styled.h4`
   margin-bottom: 1rem;
 `
 
+const SubTitle = styled.h4`
+  font-size: 1rem;
+  margin-bottom: 0.01rem;
+`
+
 const Badge = styled.span`
   display: inline-block;
   margin-bottom: 1rem;
@@ -113,9 +120,10 @@ const Text = styled.p`
 `
 
 const List = styled.ul`
-  list-style-type: none;
+  // list-style-type: none;
   margin-left: 1.2rem;
   margin-bottom: 1rem;
+  color: ${({ theme }) => theme.colors.muted};
 
   li {
     font-size: 0.9rem;
@@ -219,14 +227,18 @@ function ProjectModal({ project, onClose }) {
 
         <Text>{project.description}</Text>
 
+        <SubTitle>Features</SubTitle>
         <List>
           {project.features.map((item, i) => (
             <li key={i}>{item}</li>
           ))}
         </List>
 
-        <Text><strong>Tech Stack:</strong> {project.stack}</Text>
-        <Text><strong>What I learned:</strong> {project.learning}</Text>
+        <SubTitle>Tech Stack:</SubTitle>
+        <Text>{project.stack}</Text>
+
+        <SubTitle>What I learned:</SubTitle>
+        <Text>{project.learning}</Text>
       </Modal>
     </Overlay>
   )

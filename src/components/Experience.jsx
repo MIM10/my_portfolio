@@ -72,13 +72,6 @@ const Dot = styled.span`
 `
 
 const TimelineTitle = styled.h4`
-  font-size: 1.5rem;
-  font-weight: 800;
-  margin-bottom: 1.3rem;
-  text-align: left;
-`
-
-const TimelineSubTitle = styled.h4`
   font-size: .95rem;
   font-weight: 500;
   margin-bottom: 0.3rem;
@@ -140,10 +133,9 @@ function Experience() {
           <Grid>
             {/* ===== LEFT TIMELINE ===== */}
             <Timeline>
-              <TimelineTitle>Timeline</TimelineTitle>
               <TimelineItem>
                 <Dot />
-                <TimelineSubTitle>Orientation & Basic Mobile</TimelineSubTitle>
+                <TimelineTitle>Orientation & Basic Mobile</TimelineTitle>
                 <TimelineText>
                   Flutter & fundamental mobile development
                 </TimelineText>
@@ -151,7 +143,7 @@ function Experience() {
 
               <TimelineItem>
                 <Dot />
-                <TimelineSubTitle>API Integration</TimelineSubTitle>
+                <TimelineTitle>API Integration</TimelineTitle>
                 <TimelineText>
                   Consume REST API & state management
                 </TimelineText>
@@ -159,7 +151,7 @@ function Experience() {
 
               <TimelineItem>
                 <Dot />
-                <TimelineSubTitle>UI/UX Implementation</TimelineSubTitle>
+                <TimelineTitle>UI/UX Implementation</TimelineTitle>
                 <TimelineText>
                   Translate Figma into mobile UI
                 </TimelineText>
@@ -167,7 +159,7 @@ function Experience() {
 
               <TimelineItem>
                 <Dot />
-                <TimelineSubTitle>Final Project</TimelineSubTitle>
+                <TimelineTitle>Final Project</TimelineTitle>
                 <TimelineText>
                   CampGear Mobile App
                 </TimelineText>

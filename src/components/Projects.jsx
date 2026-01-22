@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { FiExternalLink, FiEye, FiGithub } from 'react-icons/fi'
 
-import { clinic1, clinic2, clinic3 } from '../assets'
+import { campgear1, campgear2, campgear3, campgear4, campgear5, campgear6, campgear7, campgear8, campgear9, campgear10, campgear11, campgear12, campgear13, campgear14, campgear15, campgear16, campgear17, campgear18, campgear19, campgear20, projectFetrum1, projectFetrum2, projectFetrum3, projectFetrum4, projectFetrum5, projectFetrum6, hni1, hni2, hni3, hni4, hni5 } from '../assets'
 
 
 const Section = styled.section`
@@ -43,9 +43,9 @@ const Card = styled(motion.div)`
 `
 
 const Image = styled.img`
-  object-fit: cover;
+  object-fit: contain;
   height: 160px;
-  background: #e5e7eb;
+  background: ${({ theme }) => theme.colors.card};
 `
 
 const Content = styled.div`
@@ -57,12 +57,20 @@ const ProjectTitle = styled.h4`
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 `
 
 const Description = styled.p`
   font-size: 0.95rem;
   color: ${({ theme }) => theme.colors.muted};
   line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 `
 
 const Stack = styled.div`
@@ -97,58 +105,83 @@ function Projects() {
     const [selected, setSelected] = useState(null)
     const projects = [
         {
-            title: 'Clinic Santri App',
-            status: 'In Progress',
-            description:
-                'A fullstack web application for managing santri clinic visits and patient records.',
-            picture: clinic1,
-            screenshots: [clinic1, clinic2, clinic3],
-            features: [
-                'Authentication & role-based access',
-                'CRUD patient and visit data',
-                'Dashboard for clinic staff',
-            ],
-            stack: 'React • Node.js • Express • MySQL',
-            learning:
-                'Designing database relations, handling real-world CRUD flows, and structuring backend APIs.',
-            github: '#',
-            demo: '#',
-        },
-        {
-            title: 'Data Visualization Dashboard',
+            title: 'CampGear Mobile App',
             status: 'Completed',
             description:
-                'Interactive dashboard for visualizing public datasets using Python.',
-            picture: clinic2,
-            screenshots: [clinic1, clinic2, clinic3],
+                'CampGear is a mobile commerce application developed as the final project of the MBKM Independent Study program at NFA. The application focuses on outdoor equipment purchasing with real-world e-commerce features and a scalable backend architecture.',
+            picture: campgear1,
+            screenshots: [campgear1, campgear2, campgear3, campgear4, campgear5, campgear6, campgear7, campgear8, campgear9, campgear10, campgear11, campgear12, campgear13, campgear14, campgear15, campgear16, campgear17, campgear18, campgear19, campgear20],
             features: [
-                'Bar, line, and pie charts',
-                'Filtering and aggregation',
-                'Clean data presentation',
+                'Product catalog browsing',
+                'Real-time chat between user and admin',
+                'Shopping cart and checkout',
+                'Order history and tracking',
+                'Admin dashboard',
+                'Full CRUD product management',
             ],
-            stack: 'Python • Streamlit',
+            stack: 'Flutter • Laravel REST API • Firebase • MySQL',
             learning:
-                'Transforming raw data into insights and building interactive visualizations.',
+                'Developing a real-world mobile application, integrating Flutter with REST APIs, managing authentication, real-time features, and designing scalable backend systems.',
             github: '#',
-            demo: '#',
+            demo: null,
         },
+        // {
+        //     title: 'Clinic Santri App',
+        //     status: 'In Progress',
+        //     description:
+        //         'Klinik Santri is a web-based clinic management system requested by a pesantren to record and manage patient visits. The system is designed to simplify data entry, authentication, and daily clinic operations.',
+        //     picture: clinic1,
+        //     screenshots: [clinic1, clinic2, clinic3],
+        //     features: [
+        //         'Authentication system',
+        //         'Patient data management',
+        //         'Clinic visit records',
+        //         'Form-based data input',
+        //         'CRUD operations',
+        //     ],
+        //     stack: 'React • Node.js • Express • MySQL',
+        //     learning:
+        //         'Handling real client requirements, designing backend APIs, implementing authentication, and managing relational databases in a fullstack web application.',
+        //     github: '#',
+        //     demo: null,
+        // },
         {
-            title: 'Personal Portfolio',
+            title: 'FeTrum',
             status: 'Completed',
             description:
-                'My personal developer portfolio showcasing projects, skills, and experience.',
-            picture: clinic3,
-            screenshots: [clinic1, clinic2, clinic3],
+                'FeTrum is a responsive ferry and cruise ticket booking website developed as a team final project for the Web Programming course. I contributed primarily to the frontend implementation, focusing on responsive layouts and user flows.',
+            picture: projectFetrum1,
+            screenshots: [projectFetrum1, projectFetrum2, projectFetrum3, projectFetrum4, projectFetrum6, projectFetrum5],
             features: [
+                'Responsive ticket booking interface',
+                'Destination catalog',
+                'Ticket ordering flow',
+                'Admin dashboard',
+                'Login and registration system',
+            ],
+            stack: 'HTML • SCSS • JavaScript • Node.js',
+            learning:
+                'Collaborating in a team environment, building responsive interfaces, and understanding real-world frontend workflows.',
+            github: 'https://github.com/MIM10/pw23-finalproject',
+            demo: 'https://pw23-finalproject-fetrum.vercel.app/',
+        },
+        {
+            title: 'HNI Landing Page',
+            status: 'Completed',
+            description:
+                'A simple product landing page developed as an individual midterm project, focusing on layout structure, carousel components, and basic interactivity.',
+            picture: hni1,
+            screenshots: [hni1, hni2, hni3, hni4, hni5],
+            features: [
+                'Product landing layout',
+                'Image carousel',
                 'Responsive design',
-                'Dark mode',
-                'Smooth animations',
             ],
-            stack: 'React • Vite • Styled Components',
+            stack: 'HTML • CSS • JavaScript',
             learning:
-                'Building a scalable UI system with theming and reusable components.',
-            github: '#',
-            demo: '#',
+                'Building clean layouts, implementing basic UI interactions, and understanding responsive design fundamentals.',
+            github: 'https://github.com/MIM10/pw23-project1',
+            demo: 'https://pw23-project1-hni.vercel.app/',
         },
     ]
 

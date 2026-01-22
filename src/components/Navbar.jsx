@@ -65,16 +65,12 @@ const Hamburger = styled.div`
   transition: transform 0.3s ease, color 0.3s ease;
 
   @media (max-width: 768px) {
-    display: block;
-    // position: ${({ open }) => (open ? 'fixed' : 'absolute')};
-    
-    // top: ${({ open }) => (!open ? '1rem' : '.7rem')};
-    // right: ${({ open }) => (!open ? '1.5rem' : '1.7rem')};
+    display: flex;
   }
 
   ${({ open, theme }) =>
-        open &&
-        `
+    open &&
+    `
       color: ${theme.colors.secondary};
       transform: rotate(90deg);
     `}
@@ -84,10 +80,6 @@ const RightActions = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
 `
 
 const ThemeToggle = styled.button`
@@ -106,48 +98,42 @@ const ThemeToggle = styled.button`
     color: ${({ theme }) => theme.colors.secondary};
   }
 `
-
-const MobileThemeToggle = styled(ThemeToggle)`
-  display: none;
-  font-size: 2rem;
-
-  @media (max-width: 768px) {
-    display: block;
-  }
+const MobileThemeToggle = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 `
 
 function Navbar({ darkMode, setDarkMode }) {
-    const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false)
 
-    return (
-        <Nav>
-            <Logo href="/">Mu'aadz</Logo>
+  return (
+    <Nav>
+      <Logo href="/">Mu'aadz</Logo>
 
-            <Menu open={open}>
-                <MenuItem href="#about" onClick={() => setOpen(false)}>About</MenuItem>
-                <MenuItem href="#skills" onClick={() => setOpen(false)}>Skills</MenuItem>
-                <MenuItem href="#projects" onClick={() => setOpen(false)}>Projects</MenuItem>
-                <MenuItem href="#experience" onClick={() => setOpen(false)}>Experience</MenuItem>
-                <MenuItem href="#contact" onClick={() => setOpen(false)}>Contact</MenuItem>
+      <Menu open={open}>
+        <MenuItem href="#about" onClick={() => setOpen(false)}>About</MenuItem>
+        <MenuItem href="#skills" onClick={() => setOpen(false)}>Skills</MenuItem>
+        <MenuItem href="#projects" onClick={() => setOpen(false)}>Projects</MenuItem>
+        <MenuItem href="#experience" onClick={() => setOpen(false)}>Experience</MenuItem>
+        <MenuItem href="#contact" onClick={() => setOpen(false)}>Contact</MenuItem>
+      </Menu>
 
-                {/* Mobile actions */}
-                <MobileThemeToggle onClick={() => setDarkMode(!darkMode)}>
-                    {darkMode ? <FiSun /> : <FiMoon />}
-                </MobileThemeToggle>
-            </Menu>
+      {/* Desktop actions */}
+      <MobileThemeToggle>
+        <RightActions>
+          <ThemeToggle onClick={() => setDarkMode(!darkMode)}>
+            {darkMode ? <FiSun /> : <FiMoon />}
+          </ThemeToggle>
+        </RightActions>
 
-            {/* Desktop actions */}
-            <RightActions>
-                <ThemeToggle onClick={() => setDarkMode(!darkMode)}>
-                    {darkMode ? <FiSun /> : <FiMoon />}
-                </ThemeToggle>
-            </RightActions>
-
-            <Hamburger open={open} onClick={() => setOpen(!open)}>
-                {open ? <FiX /> : <FiMenu />}
-            </Hamburger>
-        </Nav>
-    )
+        <Hamburger open={open} onClick={() => setOpen(!open)}>
+          {open ? <FiX /> : <FiMenu />}
+        </Hamburger>
+      </MobileThemeToggle>
+    </Nav>
+  )
 }
 
 export default Navbar

@@ -129,11 +129,11 @@ function Hero() {
 
                     <Heading>
                         Hi, I'm <Highlight>Mu'aadz</Highlight> <br />
-                        Fullstack Developer
+                        Junior Fullstack Developer
                     </Heading>
 
                     <Description>
-                        I build modern web applications using React, Node.js, and MongoDB.
+                        I build modern web applications using Laravel and REST APIs.
                         Focused on clean code, scalable architecture, and great user experience.
                     </Description>
 

@@ -70,52 +70,54 @@ const Highlight = styled.span`
 `
 
 function About() {
-    return (
-        <Section id="about">
-            <Container>
-                <Title>About Me</Title>
+  return (
+    <Section id="about">
+      <Container>
+        <Title>About Me</Title>
 
-                <Content
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                >
-                    <Card
-                        whileHover={{ scale: 1.03 }}
-                        transition={{ type: 'spring', stiffness: 200 }}
-                    >
-                        <CardText>
-                            I am a <Highlight>Fullstack Developer</Highlight> with a strong focus on
-                            frontend development using React. I enjoy building clean, responsive,
-                            and user-friendly interfaces.
-                        </CardText>
-                    </Card>
+        <Content
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <Card
+            whileHover={{ scale: 1.03 }}
+            transition={{ type: 'spring', stiffness: 200 }}
+          >
+            <CardText>
+              {/* I am a Fullstack Developer with a strong focus on
+              frontend development using React. I enjoy building clean, responsive,
+              and user-friendly interfaces. */}
+              I am a <Highlight>Junior Fullstack Developer</Highlight> with hands-on experience in building end-to-end web and mobile applications.
+            </CardText>
+          </Card>
 
-                    <Card
-                        whileHover={{ scale: 1.03 }}
-                        transition={{ type: 'spring', stiffness: 200 }}
-                    >
-                        <CardText>
-                            I have experience developing fullstack applications with Node.js,
-                            Express, MongoDB, and JWT authentication. I am comfortable working with
-                            REST APIs, managing state, and structuring scalable projects.
-                        </CardText>
-                    </Card>
+          <Card
+            whileHover={{ scale: 1.03 }}
+            transition={{ type: 'spring', stiffness: 200 }}
+          >
+            <CardText>
+              {/* I have experience developing fullstack applications with Node.js,
+              Express, MongoDB, and JWT authentication. I am comfortable working with
+              REST APIs, managing state, and structuring scalable projects. */}
+              My primary strength lies in backend development using Laravel and REST APIs, while also being comfortable working with frontend technologies such as React and Flutter
+            </CardText>
+          </Card>
 
-                    <Card
-                        whileHover={{ scale: 1.03 }}
-                        transition={{ type: 'spring', stiffness: 200 }}
-                    >
-                        <CardText>
-                            I enjoy learning new technologies, solving challenges, and continuously improving my skills through real projects.
-                        </CardText>
-                    </Card>
-                </Content>
+          <Card
+            whileHover={{ scale: 1.03 }}
+            transition={{ type: 'spring', stiffness: 200 }}
+          >
+            <CardText>
+              I enjoy learning new technologies, solving real-world problems, and continuously improving my development skills through real projects.
+            </CardText>
+          </Card>
+        </Content>
 
-            </Container>
-        </Section>
-    )
+      </Container>
+    </Section>
+  )
 }
 
 export default About

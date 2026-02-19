@@ -5,13 +5,14 @@ import App from './App'
 import GlobalStyle from './styles/GlobalStyle'
 import { lightTheme, darkTheme } from './styles/theme'
 
-function Root() {
-  const [darkMode, setDarkMode] = useState(false)
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme')
-    if (savedTheme === 'dark') setDarkMode(true)
-  }, [])
+export default function Root() {
+  const [darkMode, setDarkMode] = useState(() => {
+    try {
+      return localStorage.getItem('theme') === 'dark'
+    } catch {
+      return false
+    }
+  })
 
   useEffect(() => {
     localStorage.setItem('theme', darkMode ? 'dark' : 'light')

@@ -123,7 +123,7 @@ function Projects() {
             learning:
                 'Developing a real-world mobile application, integrating Flutter with REST APIs, managing authentication, real-time features, and designing scalable backend systems.',
             github: 'https://github.com/Auliarahmannn/Kelompok7_MAD',
-            demo: null,
+            demo: 'https://www.figma.com/design/jKwT5zOyQ8JIunXnv8M9xj/MAD_CampGear?node-id=0-1&t=QCeFWAmOfC9ku75f-1',
         },
         // {
         //     title: 'Clinic Santri App',

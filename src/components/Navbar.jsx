@@ -17,7 +17,7 @@ const Nav = styled.nav`
   z-index: 999;
 
   @media (max-width: 768px) {
-    padding: .51rem 1.5rem;
+    padding: .75rem 1rem;
   }
 `
 
@@ -36,7 +36,8 @@ const Menu = styled.ul`
     top: ${({ open }) => (open ? '0' : '-100%')};
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 70px);
+    padding-top: 80px;
     flex-direction: column;
     align-items: center;
     justify-content: center;

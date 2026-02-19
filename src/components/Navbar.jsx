@@ -33,11 +33,10 @@ const Menu = styled.ul`
 
   @media (max-width: 768px) {
     position: fixed;
-    top: ${({ open }) => (open ? '0' : '-100%')};
+    top: ${({ open }) => (open ? '0' : '-120%')};
     left: 0;
     width: 100%;
-    height: calc(100vh - 70px);
-    padding-top: 80px;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;

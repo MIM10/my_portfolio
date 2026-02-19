@@ -9,6 +9,11 @@ const Wrapper = styled.footer`
   padding: 60px 8%;
   border: 1px solid ${({ theme }) => theme.colors.border};
   font-family: ${({ theme }) => theme.fonts.main};
+
+  @media (max-width: 768px) {
+    padding: 40px 4%;
+    margin: 0 -2rem -2rem;
+  }
 `;
 
 const Container = styled.div`
